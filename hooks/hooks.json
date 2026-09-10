@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "AfterAgent": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx -y @aivolution/isitdone hook --host gemini",
+            "timeout": 600000,
+            "name": "isitdone"
+          }
+        ]
+      }
+    ],
+    "AfterTool": [
+      {
+        "matcher": "write_file|replace",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx -y @aivolution/isitdone hook --host gemini --event edit",
+            "timeout": 30000,
+            "name": "isitdone-edit"
+          }
+        ]
+      }
+    ]
+  }
+}
