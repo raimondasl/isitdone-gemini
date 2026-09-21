@@ -1,5 +1,5 @@
 {
   "name": "isitdone",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "description": "Gemini CLI can't say \"done\" until the tests actually pass: an AfterAgent hook runs the repository's real test, typecheck and lint commands on the exact working tree and blocks the turn with the failure output until they pass; an AfterTool hook warns when an edit weakened a test. Zero-LLM, zero-dependency, MIT."
 }
